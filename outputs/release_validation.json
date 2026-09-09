@@ -1,0 +1,11 @@
+{
+  "unit_tests": 8,
+  "recommendation_groups": 6233,
+  "eight_distinct_items_per_group": true,
+  "precision_reconciles_to_report": true,
+  "saved_model_score_reconciliation_rows": 100,
+  "saved_model_score_match": true,
+  "executed_notebook_cells": 9,
+  "pdf_pages": 8,
+  "tableau_native_open": "Unverified; application unavailable"
+}

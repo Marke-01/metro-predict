@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" original-version="26.1" version="26.1" source-build="0.0.0 (0000.0.0.0)" source-platform="win">
+  <document-format-change-manifest>
+    <ManifestByVersion/>
+  </document-format-change-manifest>
+  <datasources>
+    <datasource caption="Model accuracy - test" inline="true" name="metropredict1" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_1.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_1.csv" table="[view_1.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Model" datatype="string" ordinal="0"/>
+            <column name="Precision at 8" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Model]</local-name>
+            <parent-name>[view_1.csv]</parent-name>
+            <remote-alias>Model</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Precision at 8</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Precision at 8]</local-name>
+            <parent-name>[view_1.csv]</parent-name>
+            <remote-alias>Precision at 8</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Model]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Precision at 8]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+    </datasource>
+    <datasource caption="Category accuracy - test" inline="true" name="metropredict2" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_2.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_2.csv" table="[view_2.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Category" datatype="string" ordinal="0"/>
+            <column name="Displayed-item precision" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Category]</local-name>
+            <parent-name>[view_2.csv]</parent-name>
+            <remote-alias>Category</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Displayed-item precision</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Displayed-item precision]</local-name>
+            <parent-name>[view_2.csv]</parent-name>
+            <remote-alias>Displayed-item precision</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Category]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Displayed-item precision]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+    </datasource>
+    <datasource caption="Campaign response - observational" inline="true" name="metropredict3" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_3.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_3.csv" table="[view_3.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Campaign type" datatype="string" ordinal="0"/>
+            <column name="Household campaign redemption" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Campaign type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Campaign type]</local-name>
+            <parent-name>[view_3.csv]</parent-name>
+            <remote-alias>Campaign type</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Household campaign redemption</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Household campaign redemption]</local-name>
+            <parent-name>[view_3.csv]</parent-name>
+            <remote-alias>Household campaign redemption</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Campaign type]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Household campaign redemption]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+    </datasource>
+    <datasource caption="Economics - filtered policy assumptions" inline="true" name="metropredict4" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_4.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_4.csv" table="[view_4.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Net incremental share" datatype="string" ordinal="0"/>
+            <column name="Net monthly contribution" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Net incremental share</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Net incremental share]</local-name>
+            <parent-name>[view_4.csv]</parent-name>
+            <remote-alias>Net incremental share</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Net monthly contribution</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Net monthly contribution]</local-name>
+            <parent-name>[view_4.csv]</parent-name>
+            <remote-alias>Net monthly contribution</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Net incremental share]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Net monthly contribution]" datatype="real" role="measure" type="quantitative" default-format="$#,##0;($#,##0)"/>
+    </datasource>
+    <datasource caption="Threshold precision - validation" inline="true" name="metropredict5" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_5.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_5.csv" table="[view_5.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Score threshold" datatype="string" ordinal="0"/>
+            <column name="Displayed-item precision" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Score threshold</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Score threshold]</local-name>
+            <parent-name>[view_5.csv]</parent-name>
+            <remote-alias>Score threshold</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Displayed-item precision</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Displayed-item precision]</local-name>
+            <parent-name>[view_5.csv]</parent-name>
+            <remote-alias>Displayed-item precision</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Score threshold]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Displayed-item precision]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+    </datasource>
+    <datasource caption="Historical sales - all departments" inline="true" name="metropredict6" version="26.1">
+      <connection class="textscan" directory="Data" filename="view_6.csv" separator="," header="yes" ignore-first="0" locale="en_US" text-qualifier="&quot;" character-set="utf-8">
+        <relation name="view_6.csv" table="[view_6.csv]" type="table">
+          <columns header="yes" separator="," character-set="UTF-8" locale="en_US">
+            <column name="Normalized month" datatype="string" ordinal="0"/>
+            <column name="Recorded sales" datatype="real" ordinal="1"/>
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class="column">
+            <remote-name>Normalized month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Normalized month]</local-name>
+            <parent-name>[view_6.csv]</parent-name>
+            <remote-alias>Normalized month</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+          <metadata-record class="column">
+            <remote-name>Recorded sales</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Recorded sales]</local-name>
+            <parent-name>[view_6.csv]</parent-name>
+            <remote-alias>Recorded sales</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column name="[Normalized month]" datatype="string" role="dimension" type="nominal"/>
+      <column name="[Recorded sales]" datatype="real" role="measure" type="quantitative" default-format="$#,##0"/>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Model accuracy - test">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict1" caption="Model accuracy - test"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict1">
+            <column name="[Model]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Precision at 8]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+            <column-instance column="[Model]" derivation="None" name="[none:Model:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Precision at 8]" derivation="Sum" name="[sum:Precision at 8:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <computed-sort column="[metropredict1].[none:Model:nk]" direction="DESC" using="[metropredict1].[sum:Precision at 8:qk]"/>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict1].[sum:Precision at 8:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict1].[none:Model:nk]</rows>
+        <cols>[metropredict1].[sum:Precision at 8:qk]</cols>
+      </table>
+      <simple-id uuid="{6D32F5EC-05F1-55A4-8021-47239B6F94F0}"/>
+    </worksheet>
+    <worksheet name="Category accuracy - test">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict2" caption="Category accuracy - test"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict2">
+            <column name="[Category]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Displayed-item precision]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+            <column-instance column="[Category]" derivation="None" name="[none:Category:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Displayed-item precision]" derivation="Sum" name="[sum:Displayed-item precision:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <computed-sort column="[metropredict2].[none:Category:nk]" direction="DESC" using="[metropredict2].[sum:Displayed-item precision:qk]"/>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict2].[sum:Displayed-item precision:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict2].[none:Category:nk]</rows>
+        <cols>[metropredict2].[sum:Displayed-item precision:qk]</cols>
+      </table>
+      <simple-id uuid="{C366DCAA-C3FE-5CE8-93DB-744FB1375A90}"/>
+    </worksheet>
+    <worksheet name="Campaign response - observational">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict3" caption="Campaign response - observational"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict3">
+            <column name="[Campaign type]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Household campaign redemption]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+            <column-instance column="[Campaign type]" derivation="None" name="[none:Campaign type:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Household campaign redemption]" derivation="Sum" name="[sum:Household campaign redemption:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <computed-sort column="[metropredict3].[none:Campaign type:nk]" direction="DESC" using="[metropredict3].[sum:Household campaign redemption:qk]"/>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict3].[sum:Household campaign redemption:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict3].[none:Campaign type:nk]</rows>
+        <cols>[metropredict3].[sum:Household campaign redemption:qk]</cols>
+      </table>
+      <simple-id uuid="{EE4B699D-6492-52D7-869A-B09E6097EE2B}"/>
+    </worksheet>
+    <worksheet name="Economics - filtered policy assumptions">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict4" caption="Economics - filtered policy assumptions"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict4">
+            <column name="[Net incremental share]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Net monthly contribution]" datatype="real" role="measure" type="quantitative" default-format="$#,##0;($#,##0)"/>
+            <column-instance column="[Net incremental share]" derivation="None" name="[none:Net incremental share:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Net monthly contribution]" derivation="Sum" name="[sum:Net monthly contribution:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict4].[sum:Net monthly contribution:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict4].[none:Net incremental share:nk]</rows>
+        <cols>[metropredict4].[sum:Net monthly contribution:qk]</cols>
+      </table>
+      <simple-id uuid="{6C81020F-382B-5EBA-B63D-16D57437C3D2}"/>
+    </worksheet>
+    <worksheet name="Threshold precision - validation">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict5" caption="Threshold precision - validation"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict5">
+            <column name="[Score threshold]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Displayed-item precision]" datatype="real" role="measure" type="quantitative" default-format="0.0%"/>
+            <column-instance column="[Score threshold]" derivation="None" name="[none:Score threshold:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Displayed-item precision]" derivation="Sum" name="[sum:Displayed-item precision:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict5].[sum:Displayed-item precision:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict5].[none:Score threshold:nk]</rows>
+        <cols>[metropredict5].[sum:Displayed-item precision:qk]</cols>
+      </table>
+      <simple-id uuid="{4268FF35-B973-55EA-92A9-18B0458EB8E0}"/>
+    </worksheet>
+    <worksheet name="Historical sales - all departments">
+      <table>
+        <view>
+          <datasources>
+            <datasource name="metropredict6" caption="Historical sales - all departments"/>
+          </datasources>
+          <datasource-dependencies datasource="metropredict6">
+            <column name="[Normalized month]" datatype="string" role="dimension" type="nominal"/>
+            <column name="[Recorded sales]" datatype="real" role="measure" type="quantitative" default-format="$#,##0"/>
+            <column-instance column="[Normalized month]" derivation="None" name="[none:Normalized month:nk]" pivot="key" type="nominal"/>
+            <column-instance column="[Recorded sales]" derivation="Sum" name="[sum:Recorded sales:qk]" pivot="key" type="quantitative"/>
+          </datasource-dependencies>
+          <aggregation value="true"/>
+        </view>
+        <style/>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value="auto"/>
+            </view>
+            <mark class="Bar"/>
+            <encodings>
+              <text column="[metropredict6].[sum:Recorded sales:qk]"/>
+            </encodings>
+            <style>
+              <style-rule element="mark">
+                <format attr="mark-color" value="#147D92"/>
+                <format attr="mark-labels-show" value="true"/>
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[metropredict6].[none:Normalized month:nk]</rows>
+        <cols>[metropredict6].[sum:Recorded sales:qk]</cols>
+      </table>
+      <simple-id uuid="{09CD9C4E-6C1F-53FC-8D81-F1EAEC54362A}"/>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Executive decision">
+      <size minwidth="1280" maxwidth="1280" minheight="850" maxheight="850" sizing-mode="fixed"/>
+      <zones>
+        <zone id="0" x="1800" y="1500" w="96000" h="6500" type-v2="text">
+          <formatted-text>
+            <run fontsize="20" bold="true" fontcolor="#102A43">MetroPredict | Conditional pilot | 8.5% relative ranking gain</run>
+          </formatted-text>
+        </zone>
+        <zone id="1" x="1800" y="8200" w="96000" h="6500" type-v2="text">
+          <formatted-text>
+            <run fontsize="11" fontcolor="#334E68">Test: 6,233 shopping days, 708 households. Confidence-filtered list: 36.4% precision at 57% day coverage. Sales uplift unmeasured.</run>
+          </formatted-text>
+        </zone>
+        <zone id="2" x="1800" y="17000" w="47500" h="37000" name="Model accuracy - test" show-title="true"/>
+        <zone id="3" x="50800" y="17000" w="47500" h="37000" name="Category accuracy - test" show-title="true"/>
+        <zone id="4" x="1800" y="56000" w="47500" h="37000" name="Economics - filtered policy assumptions" show-title="true"/>
+        <zone id="5" x="50800" y="56000" w="47500" h="37000" name="Campaign response - observational" show-title="true"/>
+        <zone id="10" x="1800" y="95500" w="96000" h="4000" type-v2="text">
+          <formatted-text>
+            <run fontsize="9" fontcolor="#52606D">Independent portfolio study inspired by Metro Market. Public Complete Journey data; no retailer affiliation. Economics: 100k days/month, 25% adoption, 10% acceptance, $3/item, 25% margin, $5k monthly cost.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid="{20D2420D-D2D7-5CF7-8998-ABF0F589A06A}"/>
+    </dashboard>
+    <dashboard name="Analytical detail">
+      <size minwidth="1280" maxwidth="1280" minheight="850" maxheight="850" sizing-mode="fixed"/>
+      <zones>
+        <zone id="0" x="1800" y="1500" w="96000" h="6500" type-v2="text">
+          <formatted-text>
+            <run fontsize="20" bold="true" fontcolor="#102A43">MetroPredict | Validation policy and historical context</run>
+          </formatted-text>
+        </zone>
+        <zone id="1" x="1800" y="8200" w="96000" h="6500" type-v2="text">
+          <formatted-text>
+            <run fontsize="11" fontcolor="#334E68">Threshold policy chosen on validation; dates are normalized. Full methods and assumptions are in the report.</run>
+          </formatted-text>
+        </zone>
+        <zone id="2" x="1800" y="17000" w="47500" h="37000" name="Threshold precision - validation" show-title="true"/>
+        <zone id="3" x="50800" y="17000" w="47500" h="37000" name="Historical sales - all departments" show-title="true"/>
+        <zone id="10" x="1800" y="95500" w="96000" h="4000" type-v2="text">
+          <formatted-text>
+            <run fontsize="9" fontcolor="#52606D">Independent portfolio study inspired by Metro Market. Public Complete Journey data; no retailer affiliation. Economics: 100k days/month, 25% adoption, 10% acceptance, $3/item, 25% margin, $5k monthly cost.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <simple-id uuid="{2F881BDB-EAFB-58ED-AE09-D84B94575FA2}"/>
+    </dashboard>
+  </dashboards>
+  <windows source-height="1000">
+    <window class="dashboard" name="Executive decision">
+      <viewpoints/>
+      <active id="2"/>
+      <simple-id uuid="{DF2C99DF-EA9C-5574-A4D2-B605B7016497}"/>
+    </window>
+    <window class="dashboard" name="Analytical detail">
+      <viewpoints/>
+      <active id="2"/>
+      <simple-id uuid="{52CBF8F7-824A-5F92-8C55-DADE196F8196}"/>
+    </window>
+  </windows>
+  <explain-data enabled-for-viewer="false" extreme-values-enabled-for-all="false">
+    <explanation-types/>
+  </explain-data>
+</workbook>

@@ -1,0 +1,12 @@
+{
+  "threshold": 0.3,
+  "shown_items": 10168,
+  "covered_days": 3553,
+  "eligible_days": 6233,
+  "day_coverage": 0.5700304829135248,
+  "displayed_item_precision": 0.36418174665617625,
+  "suggestions_per_covered_day": 2.8618069237264283,
+  "status": "Exploratory threshold selected on validation",
+  "selection_rule": "Among predefined thresholds with >=35% displayed-item validation precision and >=100 covered days, maximize validation day coverage.",
+  "validation_precision": 0.37256772224341855
+}

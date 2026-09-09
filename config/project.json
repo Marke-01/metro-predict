@@ -1,0 +1,20 @@
+{
+  "seed": 42,
+  "model_households": 800,
+  "train_start": "2017-04-01",
+  "validation_start": "2017-10-01",
+  "test_start": "2017-11-01",
+  "end_exclusive": "2018-01-01",
+  "min_prior_trips": 5,
+  "candidate_lookback_days": 180,
+  "max_candidates": 120,
+  "train_trip_stride": 3,
+  "k": 8,
+  "departments": ["GROCERY", "PRODUCE", "MEAT", "MEAT-PCKGD", "DELI", "PASTRY", "SEAFOOD", "NUTRITION", "SALAD BAR", "SEAFOOD-PCKGD"],
+  "pilot_relative_precision_gate": 0.05,
+  "monthly_eligible_trips": 100000,
+  "monthly_operating_cost": 2500,
+  "fixed_build_cost": 30000,
+  "build_amortization_months": 12,
+  "assumed_margin_rate": 0.25
+}

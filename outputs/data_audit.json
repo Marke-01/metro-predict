@@ -1,0 +1,79 @@
+{
+  "transactions": {
+    "rows": 1469307,
+    "exact_duplicate_rows": 0,
+    "null_counts": {
+      "household_id": 0,
+      "store_id": 0,
+      "basket_id": 0,
+      "product_id": 0,
+      "quantity": 0,
+      "sales_value": 0,
+      "retail_disc": 0,
+      "coupon_disc": 0,
+      "coupon_match_disc": 0,
+      "week": 0,
+      "transaction_timestamp": 0
+    }
+  },
+  "products": {
+    "rows": 92331,
+    "exact_duplicate_rows": 0,
+    "null_counts": {
+      "product_id": 0,
+      "manufacturer_id": 0,
+      "department": 0,
+      "brand": 0,
+      "product_category": 540,
+      "product_type": 528,
+      "package_size": 30586
+    }
+  },
+  "campaigns": {
+    "rows": 6589,
+    "exact_duplicate_rows": 0,
+    "null_counts": {
+      "campaign_id": 0,
+      "household_id": 0
+    }
+  },
+  "campaign_descriptions": {
+    "rows": 27,
+    "exact_duplicate_rows": 0,
+    "null_counts": {
+      "campaign_id": 0,
+      "campaign_type": 0,
+      "start_date": 0,
+      "end_date": 0
+    }
+  },
+  "coupons": {
+    "rows": 116204,
+    "exact_duplicate_rows": 4872,
+    "null_counts": {
+      "coupon_upc": 0,
+      "product_id": 0,
+      "campaign_id": 0
+    }
+  },
+  "coupon_redemptions": {
+    "rows": 2102,
+    "exact_duplicate_rows": 0,
+    "null_counts": {
+      "household_id": 0,
+      "coupon_upc": 0,
+      "campaign_id": 0,
+      "redemption_date": 0
+    }
+  },
+  "source": {
+    "households": 2469,
+    "baskets": 155848,
+    "date_min": "2017-01-01 06:53:26",
+    "date_max": "2017-12-31 23:01:20",
+    "sales_value": 4596039.58,
+    "excluded_nonpositive_quantity_or_negative_sales": 8869,
+    "missing_product_metadata_lines": 4836,
+    "shopping_days": 127347
+  }
+}

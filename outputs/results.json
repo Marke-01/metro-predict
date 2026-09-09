@@ -1,0 +1,17 @@
+{
+  "selected_on_validation": "Gradient boosting",
+  "baseline_selected_on_validation": "Frequent purchases",
+  "test_precision_at_8": 0.16470800577570993,
+  "test_baseline_precision_at_8": 0.15175276752767528,
+  "test_absolute_gain": 0.012955238248034656,
+  "test_relative_gain": 0.08537068851592443,
+  "cluster_bootstrap_95ci_absolute_gain": [
+    0.010581047823028484,
+    0.015362353817335774
+  ],
+  "recommendation": "PILOT",
+  "test_shopping_days": 6233,
+  "test_households": 708,
+  "test_eligible_day_coverage": 0.9929902819818385,
+  "decision_rule": "Pilot readiness requires >=5% relative Precision@8 gain and household-clustered 95% CI above zero. Economics and live effects remain unproven."
+}

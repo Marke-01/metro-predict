@@ -1,0 +1,6 @@
+Model,Precision at 8
+Frequent purchases,0.1517527675276752
+Recent purchases,0.1088159794641424
+Replenishment rule,0.1153136531365313
+Logistic regression,0.1624819509064655
+Gradient boosting,0.1647080057757099

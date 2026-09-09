@@ -1,0 +1,35 @@
+{
+  "features": [
+    "purchase_count",
+    "purchase_rate",
+    "days_since_last",
+    "mean_interval",
+    "median_interval",
+    "interval_cv",
+    "due_ratio",
+    "recent_30_count",
+    "recent_90_count",
+    "last_quantity",
+    "mean_quantity",
+    "last_unit_value",
+    "prior_trips",
+    "history_days",
+    "days_since_trip",
+    "trips_since_product",
+    "interval_known"
+  ],
+  "rows": 1685532,
+  "groups": 15458,
+  "households": 800,
+  "minimum_days_between_feature_source_and_target": 1,
+  "split_candidate_rows": {
+    "test": 686564,
+    "train": 663189,
+    "validation": 335779
+  },
+  "split_groups": {
+    "test": 6233,
+    "train": 6148,
+    "validation": 3077
+  }
+}
