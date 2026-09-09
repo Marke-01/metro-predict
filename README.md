@@ -1,6 +1,6 @@
 # MetroPredict
 
-**Independent grocery replenishment analytics, prepared for Eshwar Vudhanthi.**
+**Independent grocery replenishment analytics, prepared by Eshwar Vudhanthi.**
 
 Start with `reports/MetroPredict_Project_Report.pdf`. Open `tableau/MetroPredict.twbx` in Tableau 2026.1 or later for the editable workbook. Native Tableau opening was unavailable here; the workbook passes structural schema validation, not an application-level compatibility test.
 
